@@ -8,7 +8,9 @@
     och andras inlägg.
 
 ## 2. Vyer (visa bildskisser på dina sidor)
-    ![flödesschema](Flödesschema.JPG)
+    ![Sun](sun.png)
+    ![flodesschema](Flodesschema.JPG)
+
     Gå till misc för flödesschema
 
 ## 3. Databas med ER-diagram (Bild)
