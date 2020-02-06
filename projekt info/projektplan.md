@@ -11,10 +11,10 @@
     ![Sun](sun.png)
     ![flodesschema](Flodesschema.JPG)
 
-    Gå till misc för flödesschema
+    Gå till misc för flödesschema (Hänvisning till bild verkar ej fungera)
 
 ## 3. Databas med ER-diagram (Bild)
-
+    Får inte bilder att fungera men det finns bild på databasen i misc
 
 ## 4. Arkitektur (Beskriv filer och mappar - vad gör/inehåller de?)
 
