@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html lang="en"
+    head
+        meta charset="UTF-8"/
+        meta name="viewport" content="width=device-width, initial-scale=1.0"/
+        meta http-equiv="X-UA-Compatible" content="ie=edge"/
+        title Document
+    body
+    a href="../" Återvänd till startsidan
+    br
+
+        h2 Skapa ett konto
+        br
+            form action="skapaKonto" method="post"
+                input type="text" name="newUsername" placeholder="Nytt användarnamn" autocomplete="off"
+                input type="text" name="newPassword" placeholder="Nytt lösenord" autocomplete="off"
+                input type="text" name="newPassword" placeholder="Repitera lösenord" autocomplete="off"
+                input type="submit" value="Skapa konto"
+        br
+
+        h2 Logga in
+        br
+            form action="login" method="post"
+                input type="text" name="username" placeholder="Användarnamn" autocomplete="off"
+                input type="text" name="password" placeholder="Lösenord" autocomplete="off"
+                input type="submit" value="Logga in"
+            br
+            h4 Glömt lösenord?

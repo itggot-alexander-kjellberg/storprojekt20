@@ -1,0 +1,32 @@
+#headerlayout{
+    display: flex;
+    justify-content: space-between;
+}
+
+#boxstyling{
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+}
+
+#justBorder{
+    border: solid black 1px;
+    width: 90px;
+    padding: 0 5px 0 5px;
+}
+
+#anotherBoxstyling{
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+#margin{
+    margin-left: 5px;
+}
+
+#aWidth{
+    width: 74px;
+}

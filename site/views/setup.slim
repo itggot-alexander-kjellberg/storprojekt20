@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html lang="en"
+    head
+        meta charset="UTF-8"/
+        meta name="viewport" content="width=device-width, initial-scale=1.0"/
+        meta http-equiv="X-UA-Compatible" content="ie=edge"/
+        title Document
+    body
+        div id="headerlayout"
+            div
+                form action="blogpost/new" method="post"   
+                    input type="text" name="content" placeholder="Vad gör du, nu?" autocomplete="off"
+                    input type="submit" value="POST"
+
+            div
+                form action="user/index" method="get"
+                    input type="submit" value="Login"
+
+        p = blogposts
+
+        - blogposts.each do |item|
+            
+            div id="boxstyling"
+                h3 = item["content"]
+                div
+                    div id="justBorder"
+                        p = "Ta bort inlägg"
+
+                    div id="anotherBoxstyling" 
+                        p id="aWidth" = "Skriven av:"
+                        p id="margin" = item["user_id"]
+            br
