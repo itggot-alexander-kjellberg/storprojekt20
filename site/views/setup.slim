@@ -23,8 +23,9 @@ html lang="en"
             div id="boxstyling"
                 h3 = item["content"]
                 div
-                    div id="justBorder"
-                        p = "Ta bort inlägg"
+                    form action="removeContent" method="post"
+                        div id="justBorder"
+                            p = "Ta bort inlägg"
 
                     div id="anotherBoxstyling" 
                         p id="aWidth" = "Skriven av:"
