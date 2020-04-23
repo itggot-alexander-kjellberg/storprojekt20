@@ -1,9 +1,9 @@
 require 'sinatra'
 require 'slim'
 require 'sqlite3'
+enable :sessions
 
 before do
-    # session[:user] = 1
     result = []
 end
 
@@ -14,7 +14,7 @@ end
 get('/') do
     db = SQLite3::Database.new("db/db.db")
     db.results_as_hash = true
-    result = db.execute("SELECT * FROM blogpost")
+    result = db.execute("SELECT * FROM blogpost").reverse
     slim(:setup,locals:{blogposts:result})
     
 end
@@ -24,13 +24,11 @@ get('/content') do
 end
 
 
-# Fungerar inte.
-# Efter att login lades till så slutade det fungera att lägga till content
 post('/blogpost/new') do
     user_id = session[:user]
     content = params["content"]
     db = SQLite3::Database.new("db/db.db")
-    db.execute("INSERT INTO blogpost (content, id) VALUES (?,?)",content,id)
+    db.execute("INSERT INTO blogpost (content, user_id) VALUES (?,?)",content,user_id)
     
     redirect('/')
 end
@@ -65,7 +63,8 @@ post('/user/login') do
     result = db.execute("SELECT password,id FROM user WHERE username = ?",loginUsername)
     
     p result
-    p loginPassword
+    # p loginPassword
+    # p result[0][1]
     if result[0][0] == loginPassword
         session[:user] = result[0][1]
     else
@@ -73,6 +72,7 @@ post('/user/login') do
     end
     redirect('/')
 end
+
 
 # Fungerar inte.
 # Händer inget vid klick
