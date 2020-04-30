@@ -52,8 +52,9 @@ post('/user/skapaKonto') do
     redirect('/')
 end
 
-# Fungerar inte delvis.
-# Kollar ej om det är korrekt user med korrekt pass
+# Fungerar delvis.
+# Kollar ej om det är korrekt user med korrekt pass.
+# Går ej att logga ut.
 post('/user/login') do
     loginUsername = params['username'] 
     loginPassword = params['password'] 
@@ -63,8 +64,8 @@ post('/user/login') do
     result = db.execute("SELECT password,id FROM user WHERE username = ?",loginUsername)
     
     p result
-    # p loginPassword
-    # p result[0][1]
+    p loginPassword
+    p result[0][1]
     if result[0][0] == loginPassword
         session[:user] = result[0][1]
     else

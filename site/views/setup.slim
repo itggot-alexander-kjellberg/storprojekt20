@@ -16,7 +16,7 @@ html lang="en"
                 form action="user/index" method="get"
                     input type="submit" value="Login"
 
-        p = blogposts
+        / p = blogposts
 
         - blogposts.each do |item|
             
@@ -30,4 +30,5 @@ html lang="en"
                     div id="anotherBoxstyling" 
                         p id="aWidth" = "Skriven av:"
                         p id="margin" = item["user_id"]
+                        / p id="margin" = item["user_username"] SÅHÄR VILL JAG HA DET
             br
